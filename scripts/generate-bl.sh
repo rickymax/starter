@@ -27,6 +27,6 @@ EOF
 chmod +x bl
 
 mv bl /usr/local/bin
-mv director_credentails-t /usr/local/bin
+mv director_credentails /usr/local/bin
 
 exit 0
