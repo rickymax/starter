@@ -2,7 +2,12 @@
 echo "=================================================="
 echo " Generate CF Login Command"
 echo "=================================================="
-read -r -p "Enter CF domain name: " CF_DOMAIN
+
+if [[ -n "$1" ]]; then
+    CF_DOMAIN=$1
+else
+    read -r -p "Enter CF domain name: " CF_DOMAIN
+fi
 
 cat << EOF >> cl
 #!/bin/bash
