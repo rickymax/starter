@@ -11,7 +11,7 @@ fi
 
 cat << EOF >> cl
 #!/bin/bash
-cf login -a api.$CF_DOMAIN -u admin -p `bosh int /opt/spacex/workspaces/cf-vars.yml --path /cf_admin_password` --skip-ssl-validation
+cf login -a api.$CF_DOMAIN -u admin -p `bosh int /opt/spacex/workspaces/cf-vars.yml --path /cf_admin_password` --skip-ssl-validation -o system
 EOF
 
 chmod +x cl
